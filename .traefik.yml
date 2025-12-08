@@ -1,7 +1,7 @@
 displayName: Timeout Plugin
 type: middleware
 
-import: https://github.com/Kichiyaki/traefiktimeout
+import: github.com/Kichiyaki/traefiktimeout
 
 summary: 'https://pkg.go.dev/net/http#TimeoutHandler for Traefik'
 
