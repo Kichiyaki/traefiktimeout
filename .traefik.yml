@@ -1,12 +1,10 @@
-displayName: Demo Plugin
+displayName: Timeout Plugin
 type: middleware
-iconPath: .assets/icon.png
 
-import: github.com/traefik/plugindemo
+import: https://github.com/Kichiyaki/traefiktimeout
 
-summary: '[Demo] Add Request Header'
+summary: 'https://pkg.go.dev/net/http#TimeoutHandler for Traefik'
 
 testData:
-  Headers:
-    X-Demo: test
-    X-URL: '{{URL}}'
+  timeout: '1s'
+  message: 'Timeout'
