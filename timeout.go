@@ -17,7 +17,6 @@ type Config struct {
 
 type TraefikTimeout struct {
 	name string
-	cfg  *Config
 	next http.Handler
 }
 
@@ -35,11 +34,10 @@ func New(_ context.Context, next http.Handler, config *Config, name string) (htt
 
 	return &TraefikTimeout{
 		name: name,
-		cfg:  config,
-		next: next,
+		next: http.TimeoutHandler(next, config.Timeout, config.Message),
 	}, nil
 }
 
 func (mw *TraefikTimeout) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	http.TimeoutHandler(mw.next, mw.cfg.Timeout, mw.cfg.Message).ServeHTTP(w, r)
+	mw.next.ServeHTTP(w, r)
 }
