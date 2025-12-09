@@ -12,7 +12,7 @@ are specified for an endpoint and there is no way to override them.
     experimental:
       plugins:
         traefiktimeout:
-          moduleName: https://github.com/Kichiyaki/traefiktimeout
+          moduleName: github.com/Kichiyaki/traefiktimeout
           version: v0.1.0  # Use the latest version
     ```
 2. Configure the middleware in your dynamic configuration.
