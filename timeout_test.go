@@ -30,7 +30,7 @@ func TestTraefikTimeout(t *testing.T) {
 
 		cfg := traefiktimeout.CreateConfig()
 
-		cfg.Timeout = time.Nanosecond
+		cfg.Timeout = time.Nanosecond.String()
 
 		h, err := traefiktimeout.New(context.Background(), next, cfg, "traefiktimeout")
 		if err != nil {
@@ -53,7 +53,7 @@ func TestTraefikTimeout(t *testing.T) {
 
 		cfg := traefiktimeout.CreateConfig()
 
-		cfg.Timeout = time.Second
+		cfg.Timeout = time.Second.String()
 
 		h, err := traefiktimeout.New(context.Background(), next, cfg, "traefiktimeout")
 		if err != nil {
