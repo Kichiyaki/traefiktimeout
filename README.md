@@ -2,7 +2,7 @@
 
 This middleware allows you to specify a timeout for each router
 separately. [Traefik's built-in timeouts](https://doc.traefik.io/traefik/reference/install-configuration/entrypoints/#opt-transport-respondingTimeouts-readTimeout)
-are specified for an endpoint and there is no way to override them.
+are specified for an entrypoint and there is no way to override them.
 
 # Installation
 
