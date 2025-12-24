@@ -15,7 +15,16 @@ are specified for an entrypoint and there is no way to override them.
           moduleName: github.com/Kichiyaki/traefiktimeout
           version: v0.1.1  # Use the latest version
     ```
-2. Configure the middleware in your dynamic configuration.
+2. Configure the middleware in your dynamic configuration (or in any other way supported by Traefik.)
+   ```yaml
+   http:
+    middlewares:
+      timeout:
+        plugin:
+          traefiktimeout:
+            timeout: 5s
+            message: Timeout
+   ```
 
 ## Configuration options
 
